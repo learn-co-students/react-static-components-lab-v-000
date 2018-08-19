@@ -43,7 +43,7 @@ Ripple.prototype = {
       ${Math.floor(rippleSettings.strokeColor[2])},
       ${this.opacity})`;
   },
-  
+
   draw: function draw() {
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.strokeColor;
@@ -51,7 +51,7 @@ Ripple.prototype = {
       2 * Math.PI);
     this.ctx.stroke();
   },
-  
+
   setStatus: function setStatus(status) {
     this.status = status;
   },
@@ -63,16 +63,16 @@ const ripples = [];
 
 
 
-const rippleStartStatus = 'start';
+// const rippleStartStatus = 'start';
 
-const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+// const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 
 canvas.width = width
 canvas.height = height
 
-let animationFrame;
+// let animationFrame;
 
 // Function which is executed on mouse hover on canvas
 const canvasMouseOver = (e) => {
@@ -97,7 +97,7 @@ const animation = () => {
       ripples.pop();
     }
   }
-  animationFrame = window.requestAnimationFrame(animation);
+  // animationFrame = window.requestAnimationFrame(animation);
 };
 
 animation()
