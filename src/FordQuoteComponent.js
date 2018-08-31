@@ -6,7 +6,7 @@ export default class FordQuoteComponent extends Component {
       <div className="bar" id="ford">
         <i><p>&quot;If I had asked people what they wanted, they would have said faster horses&quot;</p></i>
         <br />
-        &#9;-Henry Ford
+        &#9;-Henry Fordds
       </div>
     );
   }
