@@ -7,7 +7,10 @@ export default class FordQuoteComponent extends Component {
         <i><p>&quot;If I had asked people what they wanted, they would have said faster horses&quot;</p></i>
         <br />
         &#9;-Henry Ford
+        <p>Hello from the other sideeeee </p>
       </div>
+
+
     );
   }
 }
