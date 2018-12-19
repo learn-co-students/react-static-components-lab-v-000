@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CatComponent from './CatComponent.js';
-import { EinsteinQuoteComponent } from './EinsteinQuoteComponent';
+import CatComponent from './CatComponent';
 import MouseComponent from './MouseComponent';
+import { EinsteinQuoteComponent }  from './EinsteinQuoteComponent';
 
 class App extends Component {
 	render() {
