@@ -1,5 +1,5 @@
 # React Static Components
-
+Brad
 ## Objectives
 
 - Practice rendering static children components
