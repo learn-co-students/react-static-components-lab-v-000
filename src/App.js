@@ -12,6 +12,7 @@ class App extends Component {
 				<EinsteinQuoteComponent />
 				<MouseComponent />
 			</div>
+			
 		);
 	}
 }
