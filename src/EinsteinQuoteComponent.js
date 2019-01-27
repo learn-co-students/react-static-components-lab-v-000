@@ -11,7 +11,7 @@ export class EinsteinQuoteComponent extends Component {
 					</p>
 				</i>
 				<br />
-				&#9;-Einstein
+				
 			</div>
 		);
 	}
