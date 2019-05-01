@@ -63,16 +63,16 @@ const ripples = [];
 
 
 
-const rippleStartStatus = 'start';
+// const rippleStartStatus = 'start';
 
-const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+// const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 
 canvas.width = width
 canvas.height = height
 
-let animationFrame;
+// let animationFrame;
 
 // Function which is executed on mouse hover on canvas
 const canvasMouseOver = (e) => {
