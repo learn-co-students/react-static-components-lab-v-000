@@ -72,7 +72,7 @@ canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 canvas.width = width
 canvas.height = height
 
-// let animationFrame;
+let animationFrame;
 
 // Function which is executed on mouse hover on canvas
 const canvasMouseOver = (e) => {
