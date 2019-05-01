@@ -72,6 +72,7 @@ canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 canvas.width = width
 canvas.height = height
 
+// eslint-disable-next-line
 let animationFrame;
 
 // Function which is executed on mouse hover on canvas
