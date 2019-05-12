@@ -8,6 +8,14 @@ class App extends Component {
 		// your code in the return statement below!
 		return (
 			<div className="App">
+				{/* App should include the cat component: */}
+				<CatComponent />
+
+				{/* App should include the einstein-quote component: */}
+				<EinsteinQuoteComponent />
+
+				{/* App should include the mouse component: */}
+				<MouseComponent />
 			</div>
 		);
 	}
