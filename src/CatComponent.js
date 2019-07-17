@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class CatComponent extends Component {
+export class CatComponent extends Component {
   render() {
     return (
       <div className="bar" id="cat">
