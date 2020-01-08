@@ -3,12 +3,12 @@
 const rippleSettings = {
   maxSize: 100,
   animationSpeed: 2,
-  strokeColor: [45, 45, 45],
+  strokeColor: [45, 45, 45]
 };
 
 const canvasSettings = {
   blur: 8,
-  ratio: 1,
+  ratio: 1
 };
 
 function Coords(x, y) {
@@ -28,10 +28,10 @@ const Ripple = function Ripple(x, y, circleSize, ctx) {
     ${this.opacity})`;
 
   this.animationSpeed = rippleSettings.animationSpeed;
-  this.opacityStep = (this.animationSpeed / (this.maxSize - circleSize)) / 2;
+  this.opacityStep = this.animationSpeed / (this.maxSize - circleSize) / 2;
 };
 
-const height = document.body.clientHeight * .3333;
+const height = document.body.clientHeight * 0.3333;
 const width = document.body.clientWidth;
 
 Ripple.prototype = {
@@ -43,39 +43,42 @@ Ripple.prototype = {
       ${Math.floor(rippleSettings.strokeColor[2])},
       ${this.opacity})`;
   },
-  
+
   draw: function draw() {
     this.ctx.beginPath();
     this.ctx.strokeStyle = this.strokeColor;
-    this.ctx.arc(this.position.x, this.position.y - height*2, this.circleSize, 0,
-      2 * Math.PI);
+    this.ctx.arc(
+      this.position.x,
+      this.position.y - height * 2,
+      this.circleSize,
+      0,
+      2 * Math.PI
+    );
     this.ctx.stroke();
   },
-  
+
   setStatus: function setStatus(status) {
     this.status = status;
-  },
+  }
 };
 
-const canvas = document.querySelector('#canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("#canvas");
+const ctx = canvas.getContext("2d");
 const ripples = [];
 
-
-
-const rippleStartStatus = 'start';
+const rippleStartStatus = "start";
 
 const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 canvas.style.filter = `blur(${canvasSettings.blur}px)`;
 
-canvas.width = width
-canvas.height = height
+canvas.width = width;
+canvas.height = height;
 
 let animationFrame;
 
 // Function which is executed on mouse hover on canvas
-const canvasMouseOver = (e) => {
+const canvasMouseOver = e => {
   const x = e.clientX;
   const y = e.clientY;
   ripples.unshift(new Ripple(x, y, 2, ctx));
@@ -100,5 +103,5 @@ const animation = () => {
   animationFrame = window.requestAnimationFrame(animation);
 };
 
-animation()
-canvas.addEventListener('mousemove', canvasMouseOver);
+animation();
+canvas.addEventListener("mousemove", canvasMouseOver);
