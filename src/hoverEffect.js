@@ -1,3 +1,4 @@
+
 // This script is an altered version of the CodePen made by 'Captain Anonymous': https://codepen.io/anon/pen/jKQoaj
 
 const rippleSettings = {
